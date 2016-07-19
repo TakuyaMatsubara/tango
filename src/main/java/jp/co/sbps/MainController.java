@@ -43,9 +43,8 @@ public class MainController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST ,path="/mark")
-	public String RequestFormSubmit(MainForm mainForm, Model model){
+	public String requestFormSubmit(MainForm mainForm, Model model){
 		
-//		model.addAttribute("mainForm",mainForm);
 		
 		System.out.println("debug; "+mainForm);
 		return "mark";
