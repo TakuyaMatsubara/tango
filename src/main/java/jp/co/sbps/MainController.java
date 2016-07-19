@@ -43,10 +43,10 @@ public class MainController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST ,path="/mark")
-	public String requestFormSubmit(MainForm mainForm, Model model){
+	public String RequestFormSubmit(MainForm mainForm, Model model){
 		
 		
-		System.out.println("debug; "+mainForm);
+		System.out.println("deug; "+mainForm);
 		return "mark";
 	}
 		
