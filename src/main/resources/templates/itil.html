@@ -6,25 +6,9 @@
 </head>
 <body>
 <h1>ITIL</h1>
- <!-- <form action="#" th:action="@{/result}" th:object="${mainForm}" method="post">
- <table border="1">
-      <tr>
-        <th><h1>id</h1></th>
-        <th><h1>問題</h1></th>
-        <th><h1>解答</h1></th>
-      </tr>
-      
-           <tr th:each="que, stat : ${question}">
-        <td><h1 th:text="${que.question_id}"></h1></td>
-        <td><h1 th:text="${que.question_name}"></h1></td>
-	 	<td><h1><input type="radio" name="answer" value="○"  th:name="${'requests[' + stat.index + '].questionId'}"/> ○</h1>
-	 	
-		<h1><input type="radio"  value="×" th:name="${'requests[' + stat.index + '].questionId'}"/> ×</h1></td>
-		</tr>
-</table>
-</form>-->
 
-<form th:action="@{/mark}" method="post" th:object="${mainForm}">
+
+ <form th:action="@{/mark}" method="post" th:object="${mainForm}">
  <table border="1">
       <tr>
         <th><h1>id</h1></th>
@@ -34,14 +18,15 @@
       <tr th:each="que, stat : ${question}">
   <td><h1 th:text="${que.question_id}"></h1></td>
   <td><h1 th:text="${que.question_name}"></h1></td>
-  <td><h1><input type="radio" name="requests[0].answer" value="mainForm" />○
-  		  <input type="radio" name="requests[0].answer" value="mainForm" />×</h1></td>
-  <!-- <input type="submit" value="POST" />-->
-	</tr>
+  <td><h1><input type="radio" name="requests[0].answer" th:value="mainForm" />○
+  		  <input type="radio" name="requests[0].answer" th:value="mainForm" />×</h1></td>
+</tr>
 </table>
-
-<input type="submit" value="saiten" />
+ <input type="submit" value="POST" />
 </form>
+
+
+
 </body>
 </html>
 
