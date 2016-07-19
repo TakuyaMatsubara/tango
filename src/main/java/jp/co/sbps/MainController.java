@@ -37,7 +37,7 @@ public class MainController {
 		Collections.shuffle(list);
 		Map<String, Object> result=list.get(0);
 		
-		System.out.println(list);
+		System.out.println(result);
 		return "itil";
 		
 	}
