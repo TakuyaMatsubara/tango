@@ -10,3 +10,5 @@ public class TangoApplication {
 		SpringApplication.run(TangoApplication.class, args);
 	}
 }
+
+// 更新テスト

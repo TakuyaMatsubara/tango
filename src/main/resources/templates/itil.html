@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="ja">
-<head>
-<meta charset="UTF-8" />
+ <head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+ <link
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+rel="stylesheet"
+integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+crossorigin="anonymous"></link>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+crossorigin="anonymous"></script>
 <title>ITIL</title>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <span class="navbar-header">
+    <span class="navbar-brand">
+      <span class="glyphicon glyphicon-pencil"></span> <span>tango</span>　　Many a little makes a mickle.
+    </span>
+  </span>
+</nav>
+
+<div class="container">
+    <div class="row">
+      <h3><span class="glyphicon glyphicon-pencil"></span> </h3>
+    </div>
+</div>
 </head>
 <body>
 <h1>ITIL</h1>
 
-
- <form th:action="@{/mark}" method="post" th:object="${mainForm}">
- <table border="1">
+ <form th:action="@{/mark}" th:method="post" th:object="${mainForm}">
+<div class="alert alert-warning" role="alert"><strong>warning</strong>：　全部解答してね！</div>
+     <table class="table table-striped table-bordered table-condensed"  border="1">
       <tr>
-        <th><h1>id</h1></th>
-        <th><h1>問題</h1></th>
-        <th><h1>解答</h1></th>
+        <th>id</th>
+        <th>問題</th>
+        <th>解答</th>
       </tr>
-      <tr th:each="que, stat : ${question}">
-  <td><h1 th:text="${que.question_id}"></h1></td>
-  <td><h1 th:text="${que.question_name}"></h1></td>
-  <td><h1><input type="radio" name="requests[0].answer" th:value="mainForm" />○
-  		  <input type="radio" name="requests[0].answer" th:value="mainForm" />×</h1></td>
-</tr>
+      	<tr th:each="que, stat : ${question}">
+  		<td><input th:type="hidden" name="requests[0].questionId" th:name="${'requests[' + stat.index + '].questionId'}" th:text="${que.question_id}" th:value="${que.question_id}" /></td>
+  		<td><input th:type="hidden" name="requests[0].questionName" th:name="${'requests[' + stat.index + '].questionName'}" th:text="${que.question_name}" th:value="${que.question_name}"  /></td>
+  		<td><input th:type="radio" name="requests[0].answer" th:name="${'requests[' + stat.index + '].answer'}" th:value="true" />○
+  			    <input th:type="radio" name="requests[0].answer" th:name="${'requests[' + stat.index + '].answer'}" th:value="false" />×
+  		</td>
+		</tr>
 </table>
- <input type="submit" value="POST" />
+
+ <input th:type="submit" th:value="POST"  class="btn btn-primary btn-lg" />
+ 
 </form>
-
-
 
 </body>
 </html>
-

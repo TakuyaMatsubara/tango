@@ -30,6 +30,7 @@ CREATE TABLE question
 	question_id varchar NOT NULL,
 	question_name varchar NOT NULL,
 	answer boolean NOT NULL,
+	correct_answer boolean NOT NULL,
 	points int NOT NULL
 ) ;
 

@@ -1,15 +1,47 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="ja">
  <head>
  <meta charset="UTF-8" />
-  <title>項目</title>
- </head>
- <body>
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+ 
 
+<link
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+rel="stylesheet"
+integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+crossorigin="anonymous"></link>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+crossorigin="anonymous"></script>
+
+<title>項目</title>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <span class="navbar-header">
+    <span class="navbar-brand">
+      <span class="glyphicon glyphicon-list-alt"></span> <span>tango</span>　　Many a little makes a mickle.
+    </span>
+  </span>
+</nav>
+
+<div class="container">
+    <div class="row">
+      <h3><span class="glyphicon glyphicon-th-list"></span> </h3>
+    </div>
+</div>
+</head>
+ <body>
+<div class="list-group">
 <table border="5" cellspacing="15" align="center">
 <tr>
-<td><a href="/itil">ITIL</a></td>
+
+<td><a class="list-group-item list-group-item-info" th:href="@{/itil}">ITIL</a></td>
+<td><a class="list-group-item list-group-item-info" th:href="@{/itil}">追加A</a></td>
+<td><a class="list-group-item list-group-item-info" th:href="@{/itil}">追加B</a></td>
 </tr>
 </table>
+</div>
 </body>
-</html>
+</html> 

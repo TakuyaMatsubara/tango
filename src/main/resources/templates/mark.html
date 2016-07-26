@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="ja">
-<head>
-<meta charset="UTF-8" />
+ <head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+ <link
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+rel="stylesheet"
+integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+crossorigin="anonymous"></link>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+crossorigin="anonymous"></script>
+
 <title>mark</title>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <span class="navbar-header">
+    <span class="navbar-brand">
+      <span class="glyphicon glyphicon-pencil"></span> <span>tango</span>　　Many a little makes a mickle.
+    </span>
+  </span>
+</nav>
+
+<div class="container">
+    <div class="row">
+      <h3><span class="glyphicon glyphicon-pencil"></span> </h3>
+    </div>
+</div>
 </head>
 <body>
+<form method="get" th:object="${mainForm}">
   
-   <a href="/">Submit another message</a>
+<table class="table table-bordered">
+	<thead> 
+		<tr>
+      	<th>ID</th>
+        <th>問題</th>
+        <th>解答</th>
+        <th>正解</th>
+   </tr>
+   </thead> 
+   <tbody>
+   <tr th:each="request, stat : ${requests}">
+  	  <td th:text="${request.question_id}" ></td>
+      <td th:text="${request.question_name}" ></td>
+  	  <td th:text="${request.answer} ? '○' : '×'" ></td>
+  	  <td th:text="${request.correct_answer} ? '○' : '×'" ></td>
+  	  
+  	  <!-- 
+  	  	三項演算子
+  	  	(boolean ? trueの挙動 : falseの挙動
+  	  	
+  	  	(request.answer ? ○ : ×))
+  	  	
+  	  	th:text = ${request.answer ? "○" : "×"}
+  	   -->
+  	  
+  	</tr>
+  </tbody>
+  </table>
+  </form>
+
+<div style="margin-left:40%;margin-right:50%;">
+ <!-- <input type="submit" class="btn btn-success" onclick="location.href='home.html'" value="homeに戻る"  style="width:90px; height:25x;position: center;" ></input> -->
+ <span class="glyphicon glyphicon-home"  onclick="location.href='home.html'" style="font-size:5em"></span> 
+</div>
 </body>
 </html>

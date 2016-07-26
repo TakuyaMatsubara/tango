@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+ <head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+ <link
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+rel="stylesheet"
+integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+crossorigin="anonymous"></link>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+crossorigin="anonymous"></script>
 </head>
-
 <body>
-
- <input type="text" placeholder="項目"></input>
-  <input type="text" placeholder="質問"></input>
-   <input type="text" placeholder="解答"></input>
-<input type="button" value="追加" onclick="insertRow('sample1_table')" />
-<input type="button" value="削除" onclick="deleteColumn('sample1_table')" />
+  <form th:action="@{/additillist/}" method="post">
+ <input type="text" name="komoku" placeholder="項目" />
+  <input type="text" name="situmon" placeholder="質問" />
+   <input type="text" name="kaitou" placeholder="解答" />
+<input type="submit" value="追加"  />
+<input type="button" value="削除"  />
+</form>
 <table class="table5" border="1" align="left">
  <tr>
  	<th>項目</th>
@@ -22,7 +34,9 @@
  	<th>末光はイケメン</th>
  	<th>○</th>
  </tr>
+
 </table>
-<a href="./home.html">ホームに戻る</a> <br />
+
+<a th:href="@{/home}">ホームに戻る</a> <br />
 </body>
 </html>
