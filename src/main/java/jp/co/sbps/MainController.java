@@ -50,7 +50,7 @@ public class MainController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST ,path="/mark")
-	public String RequestFormSubmit(MainForm mainForm, Model model){
+	public String requestFormSubmit(MainForm mainForm, Model model){
 		
 		List<Map<String, Object>> questions = findQuestionById(createIds(mainForm.getRequests()));
 		List<Map<String, Object>> homeanswer = new ArrayList<Map<String, Object>>();
