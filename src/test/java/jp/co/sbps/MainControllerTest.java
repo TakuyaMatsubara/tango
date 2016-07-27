@@ -21,14 +21,14 @@ public class MainControllerTest {
 	MainController controller;
 	
 	@Test
-	public void testRequestFormSubmit() {
+	public void testrequestFormSubmit() {
 		List<Map<String,Object>> questions = controller.findQuestionById(Arrays.asList(1, 2, 3, 4));
 		boolean correctAnswer = (boolean)questions.get(0).get("correct_answer");
 		
 		for (Map<String, Object> question : questions) {
 			System.out.println(question.get("question_id") + " : " + question.get("correct_answer"));
 		}
-		assertThat(questions.size(), is(3));
+		assertThat(questions.size(), is(4));
 		
 		System.out.println(correctAnswer);
 		System.out.println((boolean)questions.get(0).get("correct_answer"));
