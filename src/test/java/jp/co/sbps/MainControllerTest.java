@@ -28,7 +28,7 @@ public class MainControllerTest {
 		for (Map<String, Object> question : questions) {
 			System.out.println(question.get("question_id") + " : " + question.get("correct_answer"));
 		}
-		assertThat(questions.size(), is(4));
+		assertThat(questions.size(), is(3));
 		
 		System.out.println(correctAnswer);
 		System.out.println((boolean)questions.get(0).get("correct_answer"));
