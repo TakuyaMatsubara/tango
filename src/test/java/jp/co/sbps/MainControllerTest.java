@@ -22,7 +22,7 @@ public class MainControllerTest {
 	
 	@Test
 	public void testrequestFormSubmit() {
-		List<Map<String,Object>> questions = controller.findQuestionById(Arrays.asList(1, 2, 3, 5));
+		List<Map<String,Object>> questions = controller.findQuestionById(Arrays.asList(1, 3, 5, 6));
 		boolean correctAnswer = (boolean)questions.get(0).get("correct_answer");
 		
 		for (Map<String, Object> question : questions) {
