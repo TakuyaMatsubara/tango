@@ -36,7 +36,7 @@ crossorigin="anonymous"></script>
 <table class="table table-bordered">
 	<thead> 
 		<tr>
-      	<th>ID</th>
+      <!--  <th>番号</th> -->
         <th>問題</th>
         <th>解答</th>
         <th>正解</th>
@@ -44,7 +44,7 @@ crossorigin="anonymous"></script>
    </thead> 
    <tbody>
    <tr th:each="request, stat : ${requests}">
-  	  <td th:text="${request.question_id}" ></td>
+  	<!--    <td th:text="${request.question_id}" ></td> -->
       <td th:text="${request.question_name}" ></td>
   	  <td th:text="${request.answer} ? '○' : '×'" ></td>
   	  <td th:text="${request.correct_answer} ? '○' : '×'" ></td>
