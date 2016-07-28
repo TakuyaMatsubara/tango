@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<title>1章</title>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+ <head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+ <link
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+rel="stylesheet"
+integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+crossorigin="anonymous"></link>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+crossorigin="anonymous"></script>
+<title>record</title>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <span class="navbar-header">
+    <span class="navbar-brand">
+      <span class="glyphicon glyphicon-pencil"></span> <span>tango</span>　　Many a little makes a mickle.
+    </span>
+  </span>
+</nav>
+
+<div class="container">
+    <div class="row">
+      <h3><span class="glyphicon glyphicon-pencil"></span> </h3>
+    </div>
+</div>
 </head>
-<table class="table5" border="1" align="center">
- <tr><th>日付</th><th>ITIL</th><th>点数</th><th>判定</th></tr>
- <tr><th>8月1日</th><th>ITIL</th><th>点</th><th>合格</th></tr>
+
+<body>
+<table class="table table-bordered" align="center">
+	<thead> 
+		<tr>
+      	<th>日付</th>
+        <th>項目</th>
+        <th>点数</th>
+   </tr>
+   </thead> 
 </table>
-<a href='./home.html'>	ホームに戻る</a>
+ 
+
+<div style="margin-left:45%;margin-right:50%;">
+ <!-- <input type="submit" class="btn btn-success" onclick="location.href='home.html'" value="homeに戻る"  style="width:90px; height:25x;position: center;" ></input> -->
+ <span class="glyphicon glyphicon-home"  onclick="location.href='home.html'" style="font-size:5em"></span> 
+</div>
+</body>
 </html>

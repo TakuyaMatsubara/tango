@@ -14,6 +14,20 @@ crossorigin="anonymous"></link>
 src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 crossorigin="anonymous"></script>
+<title>ITILリスト</title>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <span class="navbar-header">
+    <span class="navbar-brand">
+      <span class="glyphicon glyphicon-pencil"></span> <span>tango</span>　　Many a little makes a mickle.
+    </span>
+  </span>
+</nav>
+
+<div class="container">
+    <div class="row">
+      <h3><span class="glyphicon glyphicon-pencil"></span> </h3>
+    </div>
+</div>
 </head>
 <body>
   <form th:action="@{/additillist/}" method="post">
@@ -31,12 +45,15 @@ crossorigin="anonymous"></script>
  </tr>
  <tr>
  	<th>ITIL</th>
- 	<th>末光はイケメン</th>
- 	<th>○</th>
+ 	<th>問題文</th>
+ 	<th>○ or ×</th>
  </tr>
 
 </table>
+<div style="margin-left:40%;margin-right:50%;">
+ <!-- <input type="submit" class="btn btn-success" onclick="location.href='home.html'" value="homeに戻る"  style="width:90px; height:25x;position: center;" ></input> -->
+ <span class="glyphicon glyphicon-home"  onclick="location.href='home.html'" style="font-size:5em"></span> 
+</div>
 
-<a th:href="@{/home}">ホームに戻る</a> <br />
 </body>
 </html>
